@@ -1,0 +1,67 @@
+---
+title: "Research_project_notes"
+author: "Ulrik_Horn"
+date: "6 March 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Watterson estimator
+In population genetics, the Watterson estimator is a method for describing the genetic diversity in a population.
+
+It is estimated by counting the number of polymorphic sites. It is a measure of the "population mutation rate" (population mutation rates = effective pop size* neutral mutation rate) from the observed nucleotide diversity of a population. 
+
+
+Coalescent theory
+Coalescent theory is a model of how gene variants sampled from a population may have originated from a common ancestor. In the simplest case, coalescent theory assumes no recombination, no natural selection, and no gene flow or population structure, meaning that each variant is equally likely to have been passed from one generation to the next. The model looks backward in time, merging alleles into a single ancestral copy according to a random process in coalescence events. Under this model, the expected time between successive coalescence events increases almost exponentially back in time (with wide variance). Variance in the model comes from both the random passing of alleles from one generation to the next, and the random occurrence of mutations in these alleles. 
+
+
+
+
+Meeting with Ira week 1
+
+1) figure out the Ne values/ Hetrozygosity
+
+2) unnderstand ms in and output
+
+3) understand hpc system
+
+4) Understand mscs input
+
+5) create bash script to transfer data from ms to mscsZ
+
+
+
+
+
+
+ms nsam nreps
+
+nsam - number of copies of the locus in each sample
+
+nreps - number of individual samples to generate
+
+theta - 4* (diploid population size)* (neutral mutation rate for entire locus) 
+
+
+eg command
+
+ms 4 2 -t 5.0 -s 7
+
+2 samples 
+
+each consisting of 4 chromosomes from same genome
+
+-t generated assuming that theta is 5.0
+
+-s number of polymorphic sites
+
+ -- if t and s are used together prob: which is followed by the probability of the speci???ed number of segregating sites given the genealogical history of the sample and the value of ?? speci???ed with the -t option.
+ 
+
+
+
+

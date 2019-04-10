@@ -1,0 +1,16 @@
+---
+title: "links"
+author: "Ulrik_Horn"
+date: "13 March 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+https://informatics.fas.harvard.edu/psmc-journal-club-walkthrough.html
+https://www.molecularecologist.com/2016/05/opening-pandoras-box-psmc-and-population-structure/
+
+link to papers using psmc
+https://onlinelibrary.wiley.com/doi/full/10.1111/mec.13540
