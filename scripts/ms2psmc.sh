@@ -20,6 +20,6 @@ for (( i = 1; i <= $3; i++ )); do
   cat temp_ms2psmc/raw_msout.ms | bash msout_refiner.sh | awk -f ms2psmcfa2.awk > temp_ms2psmc/psmcfa_msout.psmcfa
 
   # Use psmcfa file to generate PSMC results and store to file used in plotting in R
-  psmc/psmc -N1 -t15 -r5 -p 4+25*2+4+6 -o results_psmc/Ne_$1_frag_legnth_$2_rep_$i.psmc temp_ms2psmc/psmcfa_msout.psmcfa
+  psmc/psmc -N1 -t15 -r5 -p 4+25*2+4+6 -o results_psmc/Ne_$1_frag_length_$2_rep_$i.psmc temp_ms2psmc/psmcfa_msout.psmcfa
 
 done
