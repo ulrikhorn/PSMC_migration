@@ -1,6 +1,6 @@
 library(tidyverse)
 
-msout_results <- file("bioinformatics/psmc_project/scripts/psmc_msout.psmc")
+msout_results <- file("bioinformatics/PSMC_migration/scripts/results_psmc/filename")
 
 psmc.result<-function(file,i.iteration=25,mu=1e-8,s=100,g=1)
 {
