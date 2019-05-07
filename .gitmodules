@@ -1,0 +1,3 @@
+[submodule "scripts/ms-PSMC-ira"]
+	path = scripts/ms-PSMC-ira
+	url = https://github.com/iracooke/ms-PSMC.git
