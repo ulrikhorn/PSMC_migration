@@ -19,17 +19,17 @@ for (( i = 1; i <= $3; i++ )); do
   # rather than put in relative paths within your project.
   # The same goes for psmc
 
-  ms 2 1 -t $theta -r $rho $2 -p $dec -eN 0.3 0.5> py_temp_ms2psmc/raw_msout.ms
+  msdir/ms 2 1 -t $theta -r $rho $2 -p $dec -eN 0.3 0.5 > py_temp_ms2psmc/raw_msout.ms
 
   echo "Replicate $i ms data created"
 
   mscommand="ms 2 1 -t $theta -r $rho $2 -p $dec"
 
-  python ms-PSMC/ms2psmcfa.py py_temp_ms2psmc/raw_msout.ms > py_temp_ms2psmc/psmcfa.psmcfa
+  python ms-PSMC-ira/ms2psmcfa.py py_temp_ms2psmc/raw_msout.ms > py_temp_ms2psmc/psmcfa.psmcfa
 
   echo "Replicate $i psmcfa file generated"
 
-  psmc -N1 -t15 -r5 -p 4+25*2+4+6 -o py_results_psmc/Ne_$1_frag_length_$2_rep_$i.psmc py_temp_ms2psmc/psmcfa.psmcfa
+  psmc/psmc -N1 -t15 -r5 -p 4+25*2+4+6 -o py_results_psmc/Ne_$1_frag_length_$2_rep_$i.psmc py_temp_ms2psmc/psmcfa.psmcfa
 
   echo "Replicate $i PSMC file generated "
   # This is just for debugging
@@ -38,7 +38,7 @@ for (( i = 1; i <= $3; i++ )); do
   # This might depend a bit on your shell.  The special quotes around mscommand are so that it get
   # gets preserved as a single argument when passed to the python script
   #
-  python ms-PSMC/plot_results.py "\"$mscommand\"" py_results_psmc/Ne_$1_frag_length_$2_rep_$i.psmc
+  python ms-PSMC-ira/plot_results.py "\"$mscommand\"" py_results_psmc/Ne_$1_frag_length_$2_rep_$i.psmc
 
   echo "Replicate $i PSMC data plotted"
 done
