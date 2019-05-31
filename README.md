@@ -1,15 +1,18 @@
 # PSMC_migration
+This is a pipe for simulating genomes with ms and estimating their historical demographic history using PSMC.
 
-It is a little messy, but in theory:
+ms simulated genomes and their corresponding PSMC results are generated using the ms2psmc2.sh script.
 
-you should be able to just run the ms2psmc.sh with arguments:
-- Ne
-- frag_length
-- number of replicates
+ms2psmc2.sh
+  - arg1 Baseline effective population size
+  - arg2 DNA fragment length
+  - arg3 number of replicates
+  - arg4 migration parameter
 
-This will create psmc files in the results_psmc/ directory
 
-
-These files can then be used to plot the results using r_scripts/plot_msout_psmc.r by specifying the path to the
-file in the first line of this r script.
-  - need to make some way of plotting all recplicate files at once, atm each file has to be specified.
+This will create 3 sets of directories with:
+  - PSMC results files
+  - .csv results files
+  - python generated preliminary results
+  
+The .csv files can then be plotted in Rstudio using the py_r_plot_results.R by specifying the migration parameters used when generating the results.
