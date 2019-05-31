@@ -1,6 +1,10 @@
 # PSMC_migration
 This is a pipe for simulating genomes with ms and estimating their historical demographic history using PSMC.
 
+Required programs installed to path:
+  - ms 
+  - psmc
+
 ms simulated genomes and their corresponding PSMC results are generated using the ms2psmc2.sh script.
 
 ms2psmc2.sh
